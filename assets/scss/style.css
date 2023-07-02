@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+}
+
+p {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+body {
+  background: #f6f7fa;
+}
+
+.full_page {
+  display: flex;
+}
+
+aside {
+  background-color: #fff;
+}
+
+aside nav {
+  width: 280px;
+  height: 826px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 16px 32px 16px;
+  border-right: 1px solid #eaecf0;
+}
+
+aside nav .navbar .navbar_list {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  padding: 8px 12px 8px 12px;
+  transition: 0.2s ease;
+  border-radius: 6px;
+}
+
+aside nav .navbar .navbar_list .navbar_list-img {
+  margin-right: 12px;
+}
+
+aside nav .navbar .navbar_list .navbar_list-text {
+  color: #1b1b1b;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+aside nav .navbar .navbar_list:hover {
+  background: rgba(31, 192, 174, 0.19);
+  cursor: pointer;
+}
+
+aside nav section .setting_list {
+  display: flex;
+  padding: 8px 12px 8px 12px;
+  color: #344054;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 6px;
+}
+
+aside nav section .setting_list .setting_list-img {
+  margin-right: 12px;
+}
+
+aside nav section .setting_list:hover {
+  background: rgba(31, 192, 174, 0.19);
+  cursor: pointer;
+}
+
+main {
+  width: 1160px;
+}
+
+main header .title {
+  text-align: center;
+  color: #1b1b1b;
+  font-size: 48px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.96px;
+  padding-top: 44px;
+}
+
+main header .header_line {
+  margin: 27px 0 80px 0;
+  border-top: 1px solid #eaecf0;
+  display: block;
+}
+
+main section {
+  display: flex;
+  justify-content: center;
+}
+
+main section .delivery_camp {
+  width: 1036px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 68px;
+}
+
+main section .delivery_camp article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main section .delivery_camp article .delivery_camp-text {
+  color: #8e99ab;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+  margin: 16px;
+}
+
+main section .delivery_camp article .delivery_camp-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 72px;
+  background: #1fc0ae;
+  position: relative;
+  box-shadow: 2px 5px 2px 0px rgba(0, 0, 0, 0.205);
+  z-index: 2;
+}
+
+main section .delivery_camp article .delivery_camp-circle::before {
+  content: "";
+  position: absolute;
+  border-top: 2px dashed #009fe3;
+  width: 144px;
+  height: 1.4px;
+  left: 90px;
+  top: 50%;
+  z-index: 1;
+}
+
+main section .delivery_camp article .delivery_camp-circle__disable {
+  width: 72px;
+  height: 72px;
+  border-radius: 72px;
+  background: #eaecf0;
+  box-shadow: 2px 5px 2px 0px rgba(0, 0, 0, 0.205);
+  position: relative;
+  z-index: 2;
+}
+
+main section .delivery_camp article .delivery_camp-circle__disable::after {
+  content: "";
+  position: absolute;
+  border-top: 2px dashed #eaecf0;
+  width: 144px;
+  height: 1.4px;
+  left: 90px;
+  top: 50%;
+  z-index: 1;
+}
+
+main section .delivery_camp article .none::after {
+  content: "";
+  border-top: none;
+}
+
+main section .information {
+  border-radius: 12px;
+  background: #fff;
+  width: 508px;
+  height: 140px;
+  margin-right: 20px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+main section .information .information_text {
+  color: #1b1b1b;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  padding: 20px 0 0 20px;
+}
+
+main section .information .information_date {
+  margin: 20px 20px 0 20px;
+}
+
+main section .information .information_date .information_date-number {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+main section .information .information_date .information_date-number .information_date-number__text {
+  color: #1b1b1b;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+main section .information .information_date .information_date-number .second_color {
+  color: #8e99ab;
+}
+
+main section .information .information_date .information_date-place {
+  display: flex;
+  justify-content: space-between;
+}
+
+main section .information .information_date .information_date-place .information_date-place__text {
+  color: #1b1b1b;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+main section .information .information_date .information_date-place .second_color {
+  color: #8e99ab;
+}
+
+main section .time_truck {
+  border-radius: 12px;
+  background: #fff;
+  width: 508px;
+  height: 140px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  display: flex;
+  align-items: center;
+}
+
+main section .time_truck .time_truck-go {
+  margin: 20px 0 0 81px;
+}
+
+main section .time_truck .time_truck-go .time_truck-go__text {
+  color: #1fc0ae;
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 32px;
+}
+
+main section .time_truck .time_truck-go .small {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+main section .time_truck .time_truck-img {
+  margin-left: 110px;
+}
+
+main section .re_cargo {
+  width: 1036px;
+  height: 345px;
+  background-color: #fff;
+  border-radius: 12px;
+  margin: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+main section .re_cargo .re_cargo-header {
+  color: #1b1b1b;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  padding: 20px 0 0 17px;
+}
+
+main section .re_cargo .re_cargo_plan {
+  margin: 20px 20px 40px 20px;
+}
+
+main section .re_cargo .re_cargo_plan .re_cargo_select {
+  margin-bottom: 20px;
+}
+
+main section .re_cargo .re_cargo_plan .re_cargo_select .re_cargo_select-title {
+  color: #8e99ab;
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+main section .re_cargo .re_cargo_plan .re_cargo_select select {
+  width: 996px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #eaecf0;
+  background: #f9fafb;
+  color: #8e99ab;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../img/chevron-down.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+
+main section .re_cargo .re_cargo_plan .re_cargo_select option {
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+main section .re_cargo .re_cargo_btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+main section .re_cargo .re_cargo_btn .re_cargo_btn-1 {
+  width: 88px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #1fc0ae;
+  border: none;
+  transition: 0.4s ease;
+  border: 1px solid #1fc0ae;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+main section .re_cargo .re_cargo_btn .re_cargo_btn-1:hover {
+  background: transparent;
+  color: #1b1b1b;
+}

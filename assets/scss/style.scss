@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+}
+
+$bgcolorlist: rgba(31, 192, 174, 0.19);
+$bordercolor: #eaecf0;
+$colordark: #1b1b1b;
+$greencolor: #1fc0ae;
+$greycolor: #8e99ab;
+
+@mixin font($color, $fonts, $fontw, $lineh) {
+    color: $color;
+    font-size: $fonts;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: $fontw;
+    line-height: $lineh;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+}
+p {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+body {
+    background: #f6f7fa;
+}
+.full_page {
+    display: flex;
+}
+aside {
+    background-color: #fff;
+    nav {
+        width: 280px;
+        height: 826px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px 16px 32px 16px;
+        border-right: 1px solid $bordercolor;
+        .navbar {
+            .navbar_list {
+                text-decoration: none;
+                list-style-type: none;
+                display: flex;
+                padding: 8px 12px 8px 12px;
+                transition: 0.2s ease;
+                border-radius: 6px;
+                .navbar_list-img {
+                    margin-right: 12px;
+                }
+                .navbar_list-text {
+                    @include font($colordark, 16px, 600, 24px);
+                }
+                &:hover {
+                    background: $bgcolorlist;
+                    cursor: pointer;
+                }
+            }
+        }
+        section {
+            .setting_list {
+                display: flex;
+                padding: 8px 12px 8px 12px;
+                @include font(#344054, 16px, 600, 24px);
+                border-radius: 6px;
+                .setting_list-img {
+                    margin-right: 12px;
+                }
+                &:hover {
+                    background: $bgcolorlist;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+main {
+    width: 1160px;
+    header {
+        .title {
+            text-align: center;
+            color: #1b1b1b;
+            font-size: 48px;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: -0.96px;
+            padding-top: 44px;
+        }
+        .header_line {
+            margin: 27px 0 80px 0;
+            border-top: 1px solid $bordercolor;
+            display: block;
+        }
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        .delivery_camp {
+            width: 1036px;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 68px;
+            article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .delivery_camp-text {
+                    @include font($greycolor, 14px, 500, 20px);
+                    letter-spacing: -0.28px;
+                    margin: 16px;
+                }
+                .delivery_camp-circle {
+                    width: 72px;
+                    height: 72px;
+                    border-radius: 72px;
+                    background: $greencolor;
+                    position: relative;
+                    box-shadow: 2px 5px 2px 0px rgba(0, 0, 0, 0.205);
+                    z-index: 2;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        border-top: 2px dashed #009fe3;
+                        width: 144px;
+                        height: 1.4px;
+                        left: 90px;
+                        top: 50%;
+                        z-index: 1;
+                    }
+                }
+                .delivery_camp-circle__disable {
+                    width: 72px;
+                    height: 72px;
+                    border-radius: 72px;
+                    background: #eaecf0;
+                    box-shadow: 2px 5px 2px 0px rgba(0, 0, 0, 0.205);
+                    position: relative;
+                    z-index: 2;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        border-top: 2px dashed #eaecf0;
+                        width: 144px;
+                        height: 1.4px;
+                        left: 90px;
+                        top: 50%;
+                        z-index: 1;
+                    }
+                }
+                .none {
+                    &::after {
+                        content: "";
+                        border-top: none;
+                    }
+                }
+            }
+        }
+        .information {
+            border-radius: 12px;
+            background: #fff;
+            width: 508px;
+            height: 140px;
+            margin-right: 20px;
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            .information_text {
+                @include font($colordark, 20px, 500, 27px);
+                padding: 20px 0 0 20px;
+            }
+            .information_date {
+                margin: 20px 20px 0 20px;
+                .information_date-number {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+                    .information_date-number__text {
+                        @include font($colordark, 16px, 500, 24px);
+                    }
+                    .second_color {
+                        color: $greycolor;
+                    }
+                }
+                .information_date-place {
+                    display: flex;
+                    justify-content: space-between;
+                    .information_date-place__text {
+                        @include font($colordark, 16px, 500, 24px);
+                    }
+                    .second_color {
+                        color: $greycolor;
+                    }
+                }
+            }
+        }
+        .time_truck {
+            border-radius: 12px;
+            background: #fff;
+            width: 508px;
+            height: 140px;
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            display: flex;
+            align-items: center;
+            .time_truck-go {
+                margin: 20px 0 0 81px;
+                .time_truck-go__text {
+                    @include font($greencolor, 24px, 800, 32px);
+                }
+                .small {
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+            .time_truck-img {
+                margin-left: 110px;
+            }
+        }
+        .re_cargo {
+            width: 1036px;
+            height: 345px;
+            background-color: #fff;
+            border-radius: 12px;
+            margin: 14px;
+            display: flex;
+            flex-direction: column;
+            .re_cargo-header {
+                @include font($colordark, 20px, 500, 27px);
+                padding: 20px 0 0 17px;
+            }
+            .re_cargo_plan {
+                margin: 20px 20px 40px 20px;
+                .re_cargo_select {
+                    margin-bottom: 20px;
+                    .re_cargo_select-title {
+                        @include font($greycolor, 12px, 400, 24px);
+                    }
+                    select {
+                        width: 996px;
+                        padding: 8px 12px;
+                        border-radius: 8px;
+                        border: 1px solid #eaecf0;
+                        background: #f9fafb;
+                        @include font($greycolor, 16px, 400, 24px);
+                        outline: none;
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        background-image: url("../img/chevron-down.svg");
+                        background-position: right center;
+                        background-repeat: no-repeat;
+                        margin-right: 20px;
+                    }
+                    option {
+                        border: 1px solid #eaecf0;
+                        border-radius: 8px;
+                        background: #f9fafb;
+                    }
+                }
+            }
+            .re_cargo_btn {
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 20px;
+                .re_cargo_btn-1 {
+                    width: 88px;
+                    padding: 10px 16px;
+                    border-radius: 8px;
+                    background: $greencolor;
+                    border: none;
+                    transition: 0.4s ease;
+                    border: 1px solid $greencolor;
+                    @include font(#fff, 14px, 600, 20px);
+                    cursor: pointer;
+                    &:hover {
+                        background: transparent;
+                        color: $colordark;
+                    }
+                }
+            }
+        }
+    }
+}
